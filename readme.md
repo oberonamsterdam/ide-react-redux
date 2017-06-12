@@ -4,9 +4,11 @@ Quickly set up React components, redux reducers, redux [flow action definitions]
 Also includes a file template for use with [redux-rehydrate](https://github.com/rt2zz/redux-persist) which handles the `REHYDRATE` action.    
 Works with PhpStorm, WebStorm, IntelliJ, etc.
 
-#Overview
+![](https://jari.lol/YBQimHUTwI.gif)
 
-##File templates:  
+# Overview
+
+## File templates:  
 Create a new file and any of the following 4 will show up:
 
 - React Component  
@@ -14,16 +16,16 @@ Create a new file and any of the following 4 will show up:
 - Redux state
 - Redux state with rehydration _(same as redux state, but adds boilerplate code for handling rehydrations)_
 
-##Live templates
+## Live templates
 Available commands:  
 * `ra` - Redux action  
 * `rac` - Redux action creator
 
-#Automatic install
+# Automatic install
 
 Download [`settings.jar`](https://raw.githubusercontent.com/oberon-nl/ide-react-redux/master/settings.jar) from this repo and open it with IDE (File > Import Settings...).  
 
-#Manual install
+# Manual install
 
 ### File templates
 Put them here:
