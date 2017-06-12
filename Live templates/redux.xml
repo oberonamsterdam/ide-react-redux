@@ -1,0 +1,18 @@
+<templateSet group="redux">
+  <template name="ra" value="type $actionName$Action = {&#10;    type: '$name$',&#10;    payload: {&#10;        $END$&#10;    }&#10;};" description="Redux action" toReformat="false" toShortenFQNames="true">
+    <variable name="actionName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="capitalizeAndUnderscore(actionName)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="rac" value="export const $functionName$ = ($params$): $actionName$Action =&gt; ({&#10;    type: '$actionConstant$',&#10;    payload: {&#10;        $END$&#10;    }&#10;});" description="Redux action creator" toReformat="false" toShortenFQNames="true">
+    <variable name="functionName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="actionName" expression="capitalize(camelCase(functionName))" defaultValue="" alwaysStopAt="false" />
+    <variable name="actionConstant" expression="capitalizeAndUnderscore(actionName)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
