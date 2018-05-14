@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from 'react';
 
 #set($name = ${StringUtils.capitalizeFirstLetter(${NAME})})

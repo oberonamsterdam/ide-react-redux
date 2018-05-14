@@ -1,6 +1,3 @@
-// @flow
-import { REHYDRATE } from 'redux-persist/constants';
-
 // state def
 
 #set($capName = ${StringUtils.capitalizeFirstLetter(${NAME})})
@@ -13,12 +10,7 @@ const defaultState: $propType = {
     
 };
 
-type RehydrationAction = {
-    type: REHYDRATE,
-    payload: $propType
-};
-
-export type Action = RehydrationAction;
+export type Action = null;
 
 // actions
 
@@ -27,10 +19,6 @@ export type Action = RehydrationAction;
 
 export default (state: $propType = defaultState, action: Action) => {
     switch(action.type) {
-        case REHYDRATE:
-            return {
-                ...state
-            };
         default:
             return state;
     }

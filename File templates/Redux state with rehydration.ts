@@ -1,4 +1,4 @@
-// @flow
+import { REHYDRATE } from 'redux-persist/constants';
 
 // state def
 
@@ -12,7 +12,12 @@ const defaultState: $propType = {
     
 };
 
-export type Action = null;
+type RehydrationAction = {
+    type: REHYDRATE,
+    payload: $propType
+};
+
+export type Action = RehydrationAction;
 
 // actions
 
@@ -21,6 +26,10 @@ export type Action = null;
 
 export default (state: $propType = defaultState, action: Action) => {
     switch(action.type) {
+        case REHYDRATE:
+            return {
+                ...state
+            };
         default:
             return state;
     }
